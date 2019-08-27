@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gregslist</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <h1 class="col-12">Make a Car!</h1>
+      <form onsubmit="app.controllers.carController.addCar(event)" class="col-5">
+        <div class="form-group">
+          <label for="make">Make</label>
+          <input type="text" class="form-control" name="make" id="make" placeholder="Type in a make" required>
+        </div>
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input type="text" class="form-control" name="model" id="model" placeholder="Type in a model" required>
+        </div>
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="number" min="1890" max="2021" class="form-control" name="year" id="year"
+            placeholder="pick a year" required>
+        </div>
+        <div class="form-group">
+          <label for="imgUrl">Image</label>
+          <input type="text" class="form-control" name="imgUrl" id="imgUrl" placeholder="Type in an image address"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" name="description" id="description"
+            placeholder="Type in a description" required>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" name="price" id="price" placeholder="Type in a price" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Make Car</button>
+      </form>
+    </div>
+    <div id="cars" class="row">
+
+    </div>
+
+
+    <div class="row justify-content-center">
+      <h1 class="col-12">Make a House!</h1>
+      <form onsubmit="app.controllers.houseController.addHouse(event)" class="col-5">
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" class="form-control" name="location" id="location" placeholder="Type in location" required>
+        </div>
+        <div class="form-group">
+          <label for="bedrooms">Bedrooms</label>
+          <input type="number" class="form-control" name="bedrooms" id="bedrooms"
+            placeholder="Type in a number of bedrooms" required>
+        </div>
+        <div class="form-group">
+          <label for="bathrooms">Bathrooms</label>
+          <input type="number" class="form-control" name="bathrooms" id="bathrooms" placeholder="Number of bathrooms"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="imgUrl">Image</label>
+          <input type="text" class="form-control" name="houseimgUrl" id="houseimgUrl"
+            placeholder="Type in an image address" required>
+        </div>
+        <div class="form-group">
+          <label for="sqfeet">Square Feet</label>
+          <input type="number" class="form-control" name="sqfeet" id="sqfeet" placeholder="Type in a sqfeet" required>
+        </div>
+        <div class="form-group">
+          <label for="houseprice">Price</label>
+          <input type="number" class="form-control" name="houseprice" id="houseprice" placeholder="Type in a price"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="housedescription">Description</label>
+          <input type="text" class="form-control" name="housedescription" id="housedescription"
+            placeholder="Type in a description" required>
+          <button type="submit" class="btn btn-primary">Make Listing</button>
+        </div>
+      </form>
+    </div>
+    <div id="houses" class="row">
+
+    </div>
+
+    <div class="row justify-content-center">
+      <h1 class="col-12">Make a Job!</h1>
+      <form onsubmit="app.controllers.jobController.addJob(event)" class="col-5">
+        <div class="form-group">
+          <label for="jobLocation">Location</label>
+          <input type="text" class="form-control" name="jobLocation" id="jobLocation" placeholder="Type in location"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" class="form-control" name="category" id="category" placeholder="Type in a job category"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="salary">Salary</label>
+          <input type="number" class="form-control" name="salary" id="salary" placeholder="Estimated Salary" required>
+        </div>
+        <div class="form-group">
+          <label for="jobimgUrl">Image</label>
+          <input type="text" class="form-control" name="jobimgUrl" id="jobimgUrl" placeholder="Type in an image address"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="skillsRequired">Skills</label>
+          <input type="text" class="form-control" name="skillsRequired" id="skillsRequired"
+            placeholder="Type in skills required" required>
+        </div>
+        <div class="form-group">
+          <label for="jobDescription">Description</label>
+          <input type="text" class="form-control" name="jobDescription" id="jobDescription"
+            placeholder="Type in a description" required>
+          <button type="submit" class="btn btn-primary">Make Job Listing</button>
+        </div>
+      </form>
+    </div>
+    <div id="jobs" class="row">
+
+    </div>
+  </div>
+  <script src="/app/main.js" type="module"></script>
+</body>
+
+</html>
